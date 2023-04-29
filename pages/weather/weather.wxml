@@ -1,0 +1,26 @@
+<!--pages/weather/weather.wxml-->
+<view class="cotent">
+  <view class="today">
+    <view class="info">
+      <view class="temp">{{temp}}℃</view>
+      <view class="type">{{type}}</view>
+      <view class="city">{{city}}</view>
+      <view class="week">{{week}}</view>
+      <view class="weather">{{weather}}</view>
+    </view>
+  </view>
+  <view class="viewLine"></view>
+  <view class="otherWeather">
+    <view class="weatherId" wx:for="{{otherWeather}}" wx:key="index">
+      <view class="infoOther">
+        <view class="typeOther">{{item.date}}</view>
+        <view class="lowhighOther">{{item.tem2}}/{{item.tem1}}</view>
+        <view class="weekOther">{{item.phrase}}</view>
+        <view class="weatherOther">{{item.narrative}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="tip">
+      友情提示：天气变凉，空气湿度较大，易发生感冒，请注意适当增加衣物，加强自我防护，避免感冒。
+  </view>
+</view>
